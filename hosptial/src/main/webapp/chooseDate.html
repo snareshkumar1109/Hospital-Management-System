@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Date Selection</title>
+    <link rel="stylesheet" href="css/booking.css">
+    <script>
+        window.onload = function() {
+            const dateInput = document.getElementById('date');
+            const today = new Date().toISOString().split('T')[0];
+            dateInput.min = today;
+        };
+    </script>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+             <div class="logo">
+                <img src="images.png" alt="Consultation Logo" />
+            </div>
+            <div class="menu-icon" id="menu-icon">&#9776;</div>
+            <ul class="navbar-links" id="navbar-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="HistoryPatient.jsp">History</a></li>
+                <li><a href="remove.jsp">Cancel Appointment</a></li>
+                <li><a href="AboutUs.html">About Us</a></li>
+                <li><a href="Contact.html">Contact Us</a></li>
+                <li><a href="logout.html">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Doctor Selection Section -->
+    <section>
+        <form action="BookingDateSelectionServlet" method="post">
+            <label for="date">Choose a date(YYYY-MM-DD):</label>
+            <input type="date" id="date" name="date" required>
+            <button type="submit">Next</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

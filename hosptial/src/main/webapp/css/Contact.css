@@ -1,0 +1,180 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+/* Navbar Styles */
+.navbar {
+    background: linear-gradient(to right, #1a1a1a, #333);
+    color: white;
+    display: flex;
+    justify-content: space-between; /* Ensures logo and links are on opposite sides */
+    align-items: center;
+    padding: 20px 40px;
+}
+
+.logo img {
+    height: 50px; 
+}
+
+.menu-icon {
+    display: none; /* Hidden by default */
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* Navbar Links */
+.navbar-links {
+    margin-left: auto; /* Push links to the right */
+    display: flex; /* Display links in a row */
+}
+
+.navbar-links li {
+    margin: 0 15px; 
+    list-style-type:none;/* Adjust spacing between links */
+}
+
+.navbar-links a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px; 
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    border-radius: 100px;
+}
+
+.navbar-links a:hover {
+    background-color: gold;
+    color: black;
+}
+
+/* Contact Us Section */
+.contact-section {
+    padding: 100px 5%;
+    background-color: #fff;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.contact-section h1 {
+    font-size: 3em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.contact-section p {
+    font-size: 1.2em;
+    margin-bottom: 40px;
+    color: #555;
+    line-height: 1.8;
+}
+
+.contact-form {
+    background-color: #f8f9fa;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.contact-form:hover {
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.input-box {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.input-box label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 1.1em;
+    color: #333;
+}
+
+.input-box input,
+.input-box textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: border-color 0.3s ease;
+}
+
+.input-box input:focus,
+.input-box textarea:focus {
+    border-color: #3498db;
+    outline: none;
+}
+
+textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+.submit-btn {
+    background-color: #3498db;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #2980b9;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 50px;
+}
+/* Responsive Design for Navbar */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar-links {
+        display: none; /* Initially hidden */
+        flex-direction: column;
+        width: 100%;
+        background: #333;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        padding: 20px 0;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .navbar-links li {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .menu-icon {
+        display: block; /* Show menu icon */
+    }
+
+    .active {
+        display: flex; /* Show links when active */
+    }
+}

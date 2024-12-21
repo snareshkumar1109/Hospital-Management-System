@@ -1,0 +1,147 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+/* Navbar Styles */
+.navbar {
+    background: linear-gradient(to right, #1a1a1a, #333);
+    color: white;
+    display: flex;
+    justify-content: space-between; /* Ensures logo and links are on opposite sides */
+    align-items: center;
+    padding: 20px 40px;
+}
+
+.logo img {
+    height: 50px; 
+}
+
+.menu-icon {
+    display: none; /* Hidden by default */
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* Navbar Links */
+.navbar-links {
+    margin-left: auto; /* Push links to the right */
+    display: flex; /* Display links in a row */
+}
+
+.navbar-links li {
+    margin: 0 15px; 
+    list-style-type:none;/* Adjust spacing between links */
+}
+
+.navbar-links a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px; 
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    border-radius: 100px;
+}
+
+.navbar-links a:hover {
+    background-color: gold;
+    color: black;
+}
+
+
+/* Section Styles */
+section {
+    padding: 20px;
+    text-align: center;
+}
+
+h2 {
+    margin: 20px 0;
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+/* Button Styles */
+button {
+    padding: 8px 12px;
+    background-color: #ffd700;
+    color: rgb(41, 35, 35);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: yellow;
+}
+
+/* Footer */
+footer {
+    background: #000;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Responsive Design for Navbar */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar-links {
+        display: none; /* Initially hidden */
+        flex-direction: column;
+        width: 100%;
+        background: #333;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        padding: 20px 0;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .navbar-links li {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .menu-icon {
+        display: block; /* Show menu icon */
+    }
+
+    .active {
+        display: flex; /* Show links when active */
+    }
+}

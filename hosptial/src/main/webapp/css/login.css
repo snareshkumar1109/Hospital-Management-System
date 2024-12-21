@@ -1,0 +1,212 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+/* Navbar Styles */
+.navbar {
+    background: linear-gradient(to right, #1a1a1a, #333);
+    color: white;
+    display: flex;
+    justify-content: space-between; /* Ensures logo and links are on opposite sides */
+    align-items: center;
+    padding: 20px 40px;
+}
+
+.logo img {
+    height: 50px; 
+}
+
+.menu-icon {
+    display: none; /* Hidden by default */
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* Navbar Links */
+.navbar-links {
+    margin-left: auto; /* Push links to the right */
+    display: flex; /* Display links in a row */
+}
+
+.navbar-links li {
+    margin: 0 15px; 
+    list-style-type:none;/* Adjust spacing between links */
+}
+
+.navbar-links a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px; 
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    border-radius: 100px;
+}
+
+.navbar-links a:hover {
+    background-color: gold;
+    color: black;
+}
+
+
+/* Login Container */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full height for a centered layout */
+}
+
+/* Login Box Styling */
+.login-box {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.login-box:hover {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Login Form Heading */
+.login-box h2 {
+    margin-bottom: 10px;
+    font-size: 2em;
+    font-weight: 600;
+    color: #333;
+}
+
+.login-box h3 {
+    margin-bottom: 30px;
+    font-size: 1.2em;
+    color: #777;
+}
+
+/* Input Box Setup */
+.input-box {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.input-box label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 1em;
+    color: #333;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: border-color 0.3s ease;
+}
+
+.input-box input:focus {
+    border-color: #3498db; /* Highlight border color on focus */
+    outline: none;
+}
+
+/* Login Button Design */
+.login-btn {
+    width: 100%;
+    padding: 15px;
+    background-color: #3498db; /* Primary button color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.login-btn:hover {
+    background-color: #2980b9; /* Darker shade on hover */
+    transform: translateY(-2px); /* Lift effect on hover */
+}
+
+/* Sign-up Link Styling */
+p {
+    margin-top: 20px;
+    font-size: 0.9em;
+    color: #555;
+}
+
+p a {
+    color: #3498db;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+p a:hover {
+    text-decoration: underline;
+    color: #2980b9; /* Hover color for the link */
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Responsive Design */
+@media (max-width: 1000px) {
+    .login-box {
+        width: 90%; /* Adjust width for smaller screens */
+        padding: 30px;
+    }
+    
+    .login-box h2 {
+        font-size: 1.8em; /* Smaller heading for mobile */
+    }
+    
+    .login-btn {
+        font-size: 1em; /* Adjust button size */
+        padding: 12px; /* Adjust button padding */
+    }
+      .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar-links {
+        display: none; /* Initially hidden */
+        flex-direction: column;
+        width: 100%;
+        background: #333;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        padding: 20px 0;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .navbar-links li {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .menu-icon {
+        display: block; /* Show menu icon */
+    }
+
+    .active {
+        display: flex; /* Show links when active */
+    }
+}

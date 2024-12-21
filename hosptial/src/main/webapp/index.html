@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Consultation System - Home</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <!-- Header with Navigation Bar -->
+    <header>
+        <nav class="navbar">
+             <div class="logo">
+                <img src="images.png" alt="Consultation Logo" />
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Aboutus.html">About Us</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+                <li><a href="login.html" class="btn-login">Login</a></li>
+            </ul>
+            <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Your Health, Our Priority</h1>
+        <p>Access the best healthcare services from the comfort of your home.</p>
+        <a href="login.html" class="cta-btn">Get Started</a>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <h2>Our Services</h2>
+        <div class="service-items">
+            <div class="service-item">
+                <h3>Virtual Consultations</h3>
+                <p>Speak with experienced doctors without stepping out.</p>
+            </div>
+            <div class="service-item">
+                <h3>Appointment Scheduling</h3>
+                <p>Flexible booking, rescheduling, and cancellations at your convenience.</p>
+            </div>
+            <div class="service-item">
+                <h3>Secure Medical Records</h3>
+                <p>Access your consultation history and records anytime, anywhere.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <p>If you have any questions, we’re here to help you.</p>
+        <form>
+            <div class="input-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" required>
+            </div>
+            <div class="input-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" required>
+            </div>
+            <div class="input-group">
+                <label for="message">Message</label>
+                <textarea id="message" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="cta-btn">Send Message</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Online Consultation System. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

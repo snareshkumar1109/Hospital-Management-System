@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Online Consultation System</title>
+    <link rel="stylesheet" href="css/Aboutus.css"> <!-- Link to your CSS file -->
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="navbar">
+           <div class="logo">
+                <img src="images.png" alt="Consultation Logo" />
+            </div>
+            <div class="menu-icon" id="menu-icon">&#9776;</div>
+            <ul class="navbar-links" id="navbar-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#" class="active">About Us</a></li> 
+                <li><a href="Contact.html">Contact Us</a></li>
+                <li><a href="login.html">Login</a></li>
+            
+            </ul>
+        </nav>
+    </header>
+
+    <!-- About Us Section -->
+    <section class="about-us">
+        <h1>About Us</h1>
+        <p>Our Online Consultation System was established to make healthcare accessible and convenient for everyone. By connecting patients with qualified doctors virtually, we’re breaking down barriers to healthcare and ensuring patients receive the best care, wherever they are.</p>
+    </section>
+
+    <!-- Mission and Vision Section -->
+    <section class="mission-vision">
+        <div class="mission">
+            <h2>Our Mission</h2>
+            <p>To provide accessible, reliable, and confidential healthcare services to people worldwide through a secure online platform.</p>
+        </div>
+        <div class="vision">
+            <h2>Our Vision</h2>
+            <p>To become the leading virtual healthcare provider, empowering patients and transforming healthcare delivery.</p>
+        </div>
+    </section>
+
+    <!-- Our Team Section -->
+    <section id="team" class="team">
+        <h2>Meet Our Team</h2>
+        <div class="team-members">
+            <div class="team-member">
+                <img src="doctor1.jpg" alt="Doctor 1">
+                <h3>Dr. John Smith</h3>
+                <p>Chief Medical Officer</p>
+            </div>
+            <div class="team-member">
+                <img src="doctor2.jpg" alt="Doctor 2">
+                <h3>Dr. Emily Brown</h3>
+                <p>Senior Consultant</p>
+            </div>
+            <div class="team-member">
+                <img src="doctor3.jpg" alt="Doctor 3">
+                <h3>Dr. Sarah Lee</h3>
+                <p>Head of Patient Care</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Online Consultation System. All Rights Reserved.</p>
+    </footer>
+
+    <!-- JavaScript for Mobile Menu Toggle -->
+    <script>
+        document.getElementById('menu-icon').addEventListener('click', function () {
+            const navbarLinks = document.getElementById('navbar-links');
+            navbarLinks.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

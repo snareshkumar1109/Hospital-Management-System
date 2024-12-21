@@ -1,0 +1,214 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+/* Navbar Styles */
+.navbar {
+    background: linear-gradient(to right, #1a1a1a, #333);
+    color: white;
+    display: flex;
+    justify-content: space-between; /* Ensures logo and links are on opposite sides */
+    align-items: center;
+    padding: 20px 40px;
+}
+
+.logo img {
+    height: 50px; 
+}
+
+.menu-icon {
+    display: none; /* Hidden by default */
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* Navbar Links */
+.navbar-links {
+    margin-left: auto; /* Push links to the right */
+    display: flex; /* Display links in a row */
+}
+
+.navbar-links li {
+    margin: 0 15px; 
+    list-style-type:none;/* Adjust spacing between links */
+}
+
+.navbar-links a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px; 
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    border-radius: 100px;
+}
+
+.navbar-links a:hover {
+    background-color: gold;
+    color: black;
+}
+
+
+/* About Us Section */
+.about-us {
+    padding: 100px 5%;
+    background-color: #fff;
+    text-align: center;
+}
+
+.about-us h1 {
+    font-size: 3em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.about-us p {
+    font-size: 1.2em;
+    max-width: 800px;
+    margin: 0 auto;
+    color: #555;
+    line-height: 1.8;
+}
+
+/* Mission and Vision Section */
+.mission-vision {
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+    padding: 80px 5%;
+    background-color: #f4f4f4;
+}
+
+.mission, .vision {
+    max-width: 500px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.mission h2, .vision h2 {
+    color: #3498db;
+    font-size: 2em;
+    margin-bottom: 15px;
+}
+
+/* Team Section */
+.team {
+    padding: 80px 5%;
+    background-color: #fff;
+    text-align: center;
+}
+
+.team h2 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.team-members {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.team-member {
+    text-align: center;
+    width: 250px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.team-member:hover {
+    transform: translateY(-10px);
+}
+
+.team-member img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.team-member h3 {
+    margin: 10px 0 5px;
+    font-size: 1.5em;
+}
+
+.team-member p {
+    color: #777;
+    font-size: 1em;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 50px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-wrap: wrap;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #333;
+        position: absolute;
+        top: 80px;
+        right: 0;
+        padding: 20px 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .logo {
+        margin-right: auto;
+    }
+
+    .nav-links li {
+        margin: 0;
+        text-align: center;
+    }
+
+    .mission-vision {
+        flex-direction: column;
+        padding: 50px 5%;
+    }
+
+    .team-members {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .team-member {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+}

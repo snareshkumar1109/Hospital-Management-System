@@ -1,0 +1,208 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+/* Navbar Styles */
+.navbar {
+    background: linear-gradient(to right, #1a1a1a, #333);
+    color: white;
+    display: flex;
+    justify-content: space-between; /* Ensures logo and links are on opposite sides */
+    align-items: center;
+    padding: 20px 40px;
+}
+
+.logo img {
+    height: 50px; 
+}
+
+.menu-icon {
+    display: none; /* Hidden by default */
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* Navbar Links */
+.navbar-links {
+    margin-left: auto; /* Push links to the right */
+    display: flex; /* Display links in a row */
+}
+
+.navbar-links li {
+    margin: 0 15px; 
+    list-style-type:none;/* Adjust spacing between links */
+}
+
+.navbar-links a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px; 
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    border-radius: 100px;
+}
+
+.navbar-links a:hover {
+    background-color: gold;
+    color: black;
+}
+
+/* Signup Page Styles */
+.signup-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 80px 20px 20px;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+.signup-box {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    color: #333;
+    text-align: center;
+}
+
+.signup-box h2 {
+    margin-bottom: 30px;
+    font-size: 2.2em;
+    color: #2c3e50;
+    font-weight: 700;
+}
+
+.input-box {
+    margin-bottom: 25px;
+    text-align: left;
+}
+
+.input-box label {
+    display: block;
+    font-size: 0.95em;
+    margin-bottom: 8px;
+    color: #34495e;
+    font-weight: 500;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    color: #333;
+    font-size: 1em;
+    transition: all 0.3s ease;
+}
+
+.input-box input:focus {
+    outline: none;
+    border-color: #ffd700;
+    box-shadow: 0 0 8px rgba(207, 210, 35, 0.5);
+    background-color: #ffffff;
+}
+
+.signup-btn {
+    width: 100%;
+    padding: 14px;
+    background-color: #ffd700;
+    color: rgb(41, 35, 35);
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.signup-btn:hover {
+    background-color: yellow;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.signup-box p {
+    margin-top: 20px;
+    font-size: 0.95em;
+    color: #7f8c8d;
+}
+
+.signup-box p a {
+    color: goldenrod;
+    text-decoration: line;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.signup-box p a:hover {
+    color: black;
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    background: #000;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Responsive Design for Navbar */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background: #333;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        padding: 20px 0;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .navbar-links li {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .active {
+        display: flex;
+    }
+
+    .signup-container {
+        padding: 20px;
+    }
+
+    .signup-box {
+        width: 100%;
+        max-width: 350px;
+    }
+}
